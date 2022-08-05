@@ -1,6 +1,7 @@
 if (navigator.serviceWorker) {
   navigator.serviceWorker.register('./sw.js').then(res => {
     console.log({ res })
+    notify();
   })
 
   if (window.Notification) {
@@ -8,7 +9,7 @@ if (navigator.serviceWorker) {
       console.log("status", status)
 
     })
-    notify();
+    
   } else {
     console.log("No")
   }
